@@ -1,0 +1,21 @@
+spring:
+  kafka:
+    consumer:
+      value-deserializer: "org.springframework.kafka.support.serializer.JsonDeserializer"
+      properties:
+        "[spring.json.value.default.type]": "henry.publisher.domain.DataMsg"
+        "[spring.json.trusted.packages]": "henry.publisher"
+    producer:
+      value-serializer: "org.springframework.kafka.support.serializer.JsonSerializer"
+      properties:
+        "[spring.json.add.type.headers]": false
+    bootstrap-servers: "localhost:9092"
+
+  main:
+    allow-bean-definition-overriding: true
+
+kafka:
+  topic: "SampleTopic"
+
+server:
+  port: 5000

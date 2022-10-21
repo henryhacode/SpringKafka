@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "68e91165-41de-406c-9573-bb681a21bd0f",
+		"name": "SpringKafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Publish msg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"msg\": \"The weather is good\",\n    \"number\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/publisher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"publisher"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
